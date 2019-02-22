@@ -1,0 +1,17 @@
+﻿
+@{ var status = TempDataExtensions.Get<StatusMessageDisplay>(TempData, "StatusMessage"); }
+
+@if (status != null)
+{
+
+    <script type="text/javascript">
+        $(function () {
+
+            let _statusMessage = "@status.Message.ToString()";
+            toastr.success(_statusMessage, 'Success');
+
+        });
+
+    </script>
+
+}
